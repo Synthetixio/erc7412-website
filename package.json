@@ -1,8 +1,7 @@
 {
-  "name": "nextarter-chakra",
+  "name": "erc7412-website",
   "version": "0.1.0",
   "private": true,
-  "author": "sozonome",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,6 +25,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@monaco-editor/react": "^4.6.0",
     "framer-motion": "^10.17.9",
     "next": "^14.0.4",
     "next-pwa": "^5.6.0",

@@ -7,10 +7,10 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-const APP_NAME = 'erc7412';
+const APP_NAME = 'ERC-7412';
 
 export const metadata: Metadata = {
-  title: { default: APP_NAME, template: '%s | erc7412' },
+  title: { default: APP_NAME, template: '%s | ERC-7412' },
   description: '',
   applicationName: APP_NAME,
   appleWebApp: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: 'https://nextarter-chakra.sznm.dev',
-    title: 'erc7412',
+    title: 'ERC-7412',
     description: '',
     /*
     images: {

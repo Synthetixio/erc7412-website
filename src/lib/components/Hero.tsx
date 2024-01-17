@@ -2,7 +2,7 @@ import { Box, Heading, Link, Image } from '@chakra-ui/react';
 
 const Hero = () => {
   return (
-    <Box mt={48}>
+    <Box mt={48} textAlign="center">
       <Heading fontSize="10em" fontWeight={900} letterSpacing="-0.33rem">
         ERC-7412
       </Heading>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Heading, Text, Stack, Button } from '@chakra-ui/react';
+import { Box, Heading, Text, Stack, Button, Link } from '@chakra-ui/react';
 import Editor from '@monaco-editor/react';
 import { FaGithub } from 'react-icons/fa';
 import { SiNpm } from 'react-icons/si';
@@ -28,10 +28,22 @@ const ClientLibrary = () => {
       </Text>
       <Box mb={8}>
         <Stack direction="row" spacing={4}>
-          <Button leftIcon={<FaGithub />} size="sm">
+          <Button
+            as={Link}
+            href="https://github.com/synthetixio/erc7412"
+            leftIcon={<FaGithub />}
+            size="sm"
+            _hover={{ textDecoration: 'none' }}
+          >
             View on GitHub
           </Button>
-          <Button leftIcon={<SiNpm />} size="sm">
+          <Button
+            as={Link}
+            href="https://www.npmjs.com/package/erc7412"
+            leftIcon={<SiNpm />}
+            size="sm"
+            _hover={{ textDecoration: 'none' }}
+          >
             View on npm
           </Button>
         </Stack>

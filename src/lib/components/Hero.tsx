@@ -1,4 +1,4 @@
-import { Box, Heading, Link } from '@chakra-ui/react';
+import { Box, Heading, Link, Image } from '@chakra-ui/react';
 
 const Hero = () => {
   return (
@@ -18,8 +18,9 @@ const Hero = () => {
         </Link>{' '}
         for using oracle data on Ethereum
       </Heading>
-      <Box my={48} fontSize="xl" fontWeight={300} opacity={0.5}>
-        Diagram Placeholder
+
+      <Box my={36} px={24} width="100%">
+        <Image src="/sequencediagram.svg" alt="ERC-7412 Sequence Diagram" />
       </Box>
     </Box>
   );

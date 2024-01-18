@@ -8,10 +8,9 @@ import { SiNpm } from 'react-icons/si';
 const example = `import { createBundlerClient } from "permissionless"
 import { base } from "viem/chains"
 import { http } from "viem"
-import { enableERC7412 } from "erc7412"
+import { withRequiredOracleData } from "erc7412"
 
-// ~10 line code example
-`;
+// ~10 line code example`;
 
 const ClientLibrary = () => {
   return (

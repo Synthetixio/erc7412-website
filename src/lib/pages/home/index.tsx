@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 
 import ClientLibrary from '~/lib/components/ClientLibrary';
 import Hero from '~/lib/components/Hero';
@@ -8,8 +8,10 @@ const Home = () => {
   return (
     <Box>
       <Hero />
-      <ClientLibrary />
-      <SmartContracts />
+      <Container maxWidth="container.lg" px={[0, 0, 20]}>
+        <ClientLibrary />
+        <SmartContracts />
+      </Container>
     </Box>
   );
 };

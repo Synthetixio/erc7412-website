@@ -42,26 +42,34 @@ const SmartContracts = () => {
             />
           </Flex>
 
-          <Button
-            as={Link}
-            href="https://github.com/Synthetixio/synthetix-v3/tree/main/auxiliary/PythERC7412Wrapper"
-            leftIcon={<FaGithub />}
-            size="xs"
-            _hover={{ textDecoration: 'none' }}
-            mr={3}
-          >
-            Code
-          </Button>
+          <Flex>
+            <Button
+              as={Link}
+              href="https://github.com/Synthetixio/synthetix-v3/tree/main/auxiliary/PythERC7412Wrapper"
+              leftIcon={<FaGithub />}
+              size="xs"
+              _hover={{ textDecoration: 'none' }}
+              border="1px solid"
+              borderColor="whiteAlpha.300"
+            >
+              Code
+            </Button>
 
-          <Button
-            as={Link}
-            href="https://usecannon.com/packages/pyth-erc7412-wrapper"
-            leftIcon={<Image src="/logos/cannon.svg" alt="Cannon" />}
-            size="xs"
-            _hover={{ textDecoration: 'none' }}
-          >
-            Deployments
-          </Button>
+            <Button
+              as={Link}
+              href="https://usecannon.com/packages/pyth-erc7412-wrapper"
+              leftIcon={
+                <Image src="/logos/cannon.svg" alt="Cannon" maxHeight="12px" />
+              }
+              size="xs"
+              _hover={{ textDecoration: 'none' }}
+              border="1px solid"
+              borderColor="whiteAlpha.300"
+              ml="auto"
+            >
+              Deployments
+            </Button>
+          </Flex>
         </Box>
         <Box minWidth="200px">
           <Flex
@@ -94,6 +102,8 @@ const SmartContracts = () => {
             leftIcon={<FaGithub />}
             size="xs"
             _hover={{ textDecoration: 'none' }}
+            border="1px solid"
+            borderColor="whiteAlpha.300"
           >
             Code
           </Button>
@@ -130,6 +140,8 @@ const SmartContracts = () => {
             leftIcon={<FaGithub />}
             size="xs"
             _hover={{ textDecoration: 'none' }}
+            border="1px solid"
+            borderColor="whiteAlpha.300"
           >
             Code
           </Button>

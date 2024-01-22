@@ -54,6 +54,8 @@ const ClientLibrary = () => {
             leftIcon={<FaGithub />}
             size="sm"
             _hover={{ textDecoration: 'none' }}
+            border="1px solid"
+            borderColor="whiteAlpha.300"
           >
             View on GitHub
           </Button>
@@ -63,6 +65,8 @@ const ClientLibrary = () => {
             leftIcon={<SiNpm />}
             size="sm"
             _hover={{ textDecoration: 'none' }}
+            border="1px solid"
+            borderColor="whiteAlpha.300"
           >
             View on npm
           </Button>

@@ -1,10 +1,31 @@
-import { Flex, Text } from '@chakra-ui/react';
+import { Box, Link, Text, Image } from '@chakra-ui/react';
 
 const Footer = () => {
   return (
-    <Flex as="footer" width="full" justifyContent="center" mb={24}>
-      <Text fontSize="2xl">ERC-7412 powers Synthetix on Base</Text>
-    </Flex>
+    <Box as="footer" width="full" textAlign="center" mb={24} fontSize="2xl">
+      <Text display="inline" fontWeight={900} letterSpacing="0.033rem" mr="1.5">
+        ERC-7412
+      </Text>
+      &nbsp;powers{' '}
+      <Link mx={1.5} isExternal href="https://v3.synthetix.io">
+        <Image
+          display="inline"
+          src="/logos/synthetix.svg"
+          alt="Synthetix"
+          height="16px"
+        />
+      </Link>
+      &nbsp;on
+      <Link mx={2.5} isExternal href="https://base.org">
+        <Image
+          display="inline"
+          src="/logos/base.svg"
+          alt="Base"
+          height="21px"
+          transform="translateY(3px)"
+        />
+      </Link>
+    </Box>
   );
 };
 

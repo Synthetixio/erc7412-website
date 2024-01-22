@@ -1,25 +1,46 @@
 'use client';
 
-import { Box, Heading, Text, Stack, Button, Link } from '@chakra-ui/react';
-import Editor from '@monaco-editor/react';
+import {
+  Box,
+  Heading,
+  Text,
+  Stack,
+  Button,
+  Link,
+  Image,
+  Flex,
+} from '@chakra-ui/react';
+import { CodeBlock, atomOneDark } from 'react-code-blocks';
 import { FaGithub } from 'react-icons/fa';
 import { SiNpm } from 'react-icons/si';
 
-const example = `import { createBundlerClient } from "permissionless"
-import { base } from "viem/chains"
-import { http } from "viem"
-import { withRequiredOracleData } from "erc7412"
+const example = `import { withRequiredOracleData, PythAdapter } from "erc7412";
 
-// ~10 line code example`;
+// Convert transactions into an array of transactions, prepending \`fulfillOracleQuery()\` calls.
+// This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
+const transactionsWithOracleData = withRequiredOracleData(
+  transactions,
+  [new PythAdapter('https://hermes.pyth.network')]
+);
+
+return await client.sendTransactions({ transactions: transactionsWithOracleData });`;
+
+function MyCodeBlock() {
+  return (
+    <CodeBlock
+      text={example}
+      language="javascript"
+      showLineNumbers={false}
+      theme={atomOneDark}
+    />
+  );
+}
 
 const ClientLibrary = () => {
   return (
-    <Box mb={20}>
-      <Heading fontWeight={500} mb={6}>
+    <Box mb={16}>
+      <Heading fontWeight={500} mb={4}>
         Build apps with protocols that connect to oracles
-      </Heading>
-      <Heading size="md" mb={2}>
-        Client Library
       </Heading>
       <Text mb={4}>
         The client library automatically adds oracle data to transactions when
@@ -47,63 +68,111 @@ const ClientLibrary = () => {
           </Button>
         </Stack>
       </Box>
-      <Box mb={10}>
-        <Editor
-          height="200px"
-          defaultLanguage="javascript"
-          defaultValue={example}
-          theme="vs-dark"
-          options={{
-            readOnly: true,
-            minimap: { enabled: false },
-          }}
-        />
+      <Box mb={2} maxWidth="767px" style={{ fontFamily: 'monospace' }}>
+        <MyCodeBlock />
       </Box>
-      <Heading size="md" mb={4}>
-        Supported Account Abstraction Solutions
+      <Text fontSize="sm" color="gray.300" mb={16}>
+        See the{' '}
+        <Link
+          href="https://github.com/synthetixio/erc7412"
+          isExternal
+          borderBottom="1px solid"
+          _hover={{ textDecoration: 'none' }}
+        >
+          full example
+        </Link>{' '}
+        using{' '}
+        <Link
+          href="https://docs.pimlico.io/permissionless"
+          isExternal
+          borderBottom="1px solid"
+          _hover={{ textDecoration: 'none' }}
+        >
+          permissionless.js
+        </Link>
+        .
+      </Text>
+      <Heading size="md" mb={5}>
+        Compatible Account Abstraction Solutions
       </Heading>
 
-      <Stack direction="row" spacing={4}>
-        <Box
+      <Stack direction={['column', 'row']} spacing={8} mb={2}>
+        <Flex
+          href="https://safe.global"
+          isExternal
+          as={Link}
           p={4}
           bg="whiteAlpha.100"
           borderRadius="md"
           border="1px solid"
           borderColor="whiteAlpha.300"
           minWidth="200px"
+          minHeight="82px"
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
         >
-          Safe
-        </Box>
-        <Box
+          <Image src="/logos/safe.svg" alt="Safe" m="auto" opacity="0.8" />
+        </Flex>
+        <Flex
+          href="https://biconomy.io/"
+          isExternal
+          as={Link}
           p={4}
           bg="whiteAlpha.100"
           borderRadius="md"
           border="1px solid"
           borderColor="whiteAlpha.300"
           minWidth="200px"
+          minHeight="82px"
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
         >
-          Biconomy
-        </Box>
-        <Box
+          <Image
+            src="/logos/biconomy.svg"
+            alt="Biconomy"
+            m="auto"
+            opacity="0.8"
+            transform="scale(1.25) translate(0, 2px)"
+          />
+        </Flex>
+        <Flex
+          href="https://zerodev.app/"
+          isExternal
+          as={Link}
           p={4}
           bg="whiteAlpha.100"
           borderRadius="md"
           border="1px solid"
           borderColor="whiteAlpha.300"
           minWidth="200px"
+          minHeight="82px"
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
         >
-          ZeroDev
-        </Box>
+          <Image
+            src="/logos/zerodev.svg"
+            alt="ZeroDev"
+            m="auto"
+            opacity="0.8"
+          />
+        </Flex>
       </Stack>
+
+      <Text fontSize="sm" color="gray.300">
+        Protocols that integrate with the{' '}
+        <Link
+          isExternal
+          borderBottom="1px solid"
+          _hover={{ textDecoration: 'none' }}
+          href="https://github.com/Synthetixio/synthetix-v3/tree/main/auxiliary/TrustedMulticallForwarder"
+        >
+          trusted multicall forwarder
+        </Link>{' '}
+        are also compatible with EOAs.
+      </Text>
     </Box>
   );
 };

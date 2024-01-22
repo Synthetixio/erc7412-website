@@ -1,4 +1,13 @@
-import { Box, Stack, Heading } from '@chakra-ui/react';
+import {
+  Box,
+  Stack,
+  Heading,
+  Image,
+  Link,
+  Button,
+  Flex,
+} from '@chakra-ui/react';
+import { FaGithub } from 'react-icons/fa';
 
 const SmartContracts = () => {
   return (
@@ -6,45 +15,124 @@ const SmartContracts = () => {
       <Heading fontWeight={500} mb={6}>
         Build protocols that use off-chain data from oracles
       </Heading>
-      <Stack direction="row" spacing={4}>
-        <Box
-          p={4}
-          bg="whiteAlpha.100"
-          borderRadius="md"
-          border="1px solid"
-          borderColor="whiteAlpha.300"
-          minWidth="200px"
-          textAlign="center"
-          fontWeight={600}
-          fontSize="xl"
-        >
-          Chainlink
+      <Stack direction={['column', 'row']} spacing={8}>
+        <Box minWidth="200px">
+          <Flex
+            href="https://pyth.network"
+            isExternal
+            as={Link}
+            p={4}
+            bg="whiteAlpha.100"
+            borderRadius="md"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+            minWidth="200px"
+            minHeight="82px"
+            textAlign="center"
+            fontWeight={600}
+            fontSize="xl"
+            mb={3}
+          >
+            <Image
+              src="/logos/pyth.svg"
+              alt="Pyth"
+              m="auto"
+              opacity="0.8"
+              maxHeight="46px"
+            />
+          </Flex>
+
+          <Button
+            as={Link}
+            href="https://github.com/Synthetixio/synthetix-v3/tree/main/auxiliary/PythERC7412Wrapper"
+            leftIcon={<FaGithub />}
+            size="xs"
+            _hover={{ textDecoration: 'none' }}
+            mr={3}
+          >
+            Code
+          </Button>
+
+          <Button
+            as={Link}
+            href="https://usecannon.com/packages/pyth-erc7412-wrapper"
+            leftIcon={<Image src="/logos/cannon.svg" alt="Cannon" />}
+            size="xs"
+            _hover={{ textDecoration: 'none' }}
+          >
+            Deployments
+          </Button>
         </Box>
-        <Box
-          p={4}
-          bg="whiteAlpha.100"
-          borderRadius="md"
-          border="1px solid"
-          borderColor="whiteAlpha.300"
-          minWidth="200px"
-          textAlign="center"
-          fontWeight={600}
-          fontSize="xl"
-        >
-          Pyth
+        <Box minWidth="200px">
+          <Flex
+            href="https://docs.chain.link/data-streams"
+            isExternal
+            as={Link}
+            p={4}
+            bg="whiteAlpha.100"
+            borderRadius="md"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+            minWidth="200px"
+            minHeight="82px"
+            textAlign="center"
+            fontWeight={600}
+            fontSize="xl"
+            mb={3}
+          >
+            <Image
+              src="/logos/chainlink.svg"
+              alt="Chainlink"
+              m="auto"
+              opacity="0.8"
+              transform="scale(1.2)"
+            />
+          </Flex>
+          <Button
+            as={Link}
+            href="https://github.com/smartcontractkit/datastreams-erc7412"
+            leftIcon={<FaGithub />}
+            size="xs"
+            _hover={{ textDecoration: 'none' }}
+          >
+            Code
+          </Button>
         </Box>
-        <Box
-          p={4}
-          bg="whiteAlpha.100"
-          borderRadius="md"
-          border="1px solid"
-          borderColor="whiteAlpha.300"
-          minWidth="200px"
-          textAlign="center"
-          fontWeight={600}
-          fontSize="xl"
-        >
-          Redstone
+        <Box minWidth="200px">
+          <Flex
+            href="https://redstone.finance/"
+            isExternal
+            as={Link}
+            p={1}
+            bg="whiteAlpha.100"
+            borderRadius="md"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+            minWidth="200px"
+            minHeight="82px"
+            textAlign="center"
+            fontWeight={600}
+            fontSize="xl"
+            mb={3}
+          >
+            <Image
+              src="/logos/redstone.svg"
+              alt="Redstone"
+              m="auto"
+              opacity="0.8"
+              maxHeight="56px"
+            />
+          </Flex>
+
+          <Button
+            as={Link}
+            href="https://github.com/redstone-finance/erc7412"
+            leftIcon={<FaGithub />}
+            size="xs"
+            _hover={{ textDecoration: 'none' }}
+          >
+            Code
+          </Button>
         </Box>
       </Stack>
     </Box>

@@ -12,7 +12,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const SmartContracts = () => {
   return (
-    <Box mb={[24, 24, 44]}>
+    <Box mb={[36, 36, 44]}>
       <Heading fontWeight={500} mb={3}>
         Build protocols that use data from oracles
       </Heading>

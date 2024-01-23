@@ -6,15 +6,20 @@ import {
   Link,
   Button,
   Flex,
+  Text,
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 
 const SmartContracts = () => {
   return (
-    <Box mb={24}>
-      <Heading fontWeight={500} mb={6}>
-        Build protocols that use off-chain data from oracles
+    <Box mb={[24, 24, 44]}>
+      <Heading fontWeight={500} mb={3}>
+        Build protocols that use data from oracles
       </Heading>
+      <Text mb={6}>
+        Write and deploy smart contracts that call oracle contracts to reference
+        off-chain data.
+      </Text>
       <Stack direction={['column', 'row']} spacing={8}>
         <Box minWidth="200px">
           <Flex
@@ -32,6 +37,7 @@ const SmartContracts = () => {
             fontWeight={600}
             fontSize="xl"
             mb={3}
+            boxShadow="0 3px 10px #17071c"
           >
             <Image
               src="/logos/pyth.svg"
@@ -51,6 +57,7 @@ const SmartContracts = () => {
               _hover={{ textDecoration: 'none' }}
               border="1px solid"
               borderColor="whiteAlpha.300"
+              boxShadow="0 3px 10px #17071c"
             >
               Code
             </Button>
@@ -65,7 +72,8 @@ const SmartContracts = () => {
               _hover={{ textDecoration: 'none' }}
               border="1px solid"
               borderColor="whiteAlpha.300"
-              ml="auto"
+              ml={[3, 3, 'auto']}
+              boxShadow="0 3px 10px #17071c"
             >
               Deployments
             </Button>
@@ -87,6 +95,7 @@ const SmartContracts = () => {
             fontWeight={600}
             fontSize="xl"
             mb={3}
+            boxShadow="0 3px 10px #17071c"
           >
             <Image
               src="/logos/chainlink.svg"
@@ -104,6 +113,7 @@ const SmartContracts = () => {
             _hover={{ textDecoration: 'none' }}
             border="1px solid"
             borderColor="whiteAlpha.300"
+            boxShadow="0 3px 10px #17071c"
           >
             Code
           </Button>
@@ -124,6 +134,7 @@ const SmartContracts = () => {
             fontWeight={600}
             fontSize="xl"
             mb={3}
+            boxShadow="0 3px 10px #17071c"
           >
             <Image
               src="/logos/redstone.svg"
@@ -142,6 +153,7 @@ const SmartContracts = () => {
             _hover={{ textDecoration: 'none' }}
             border="1px solid"
             borderColor="whiteAlpha.300"
+            boxShadow="0 3px 10px #17071c"
           >
             Code
           </Button>

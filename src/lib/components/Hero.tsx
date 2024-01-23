@@ -7,10 +7,15 @@ const Hero = () => {
         fontSize={['4em', '10em']}
         fontWeight={900}
         letterSpacing={['0', '-0.33rem']}
+        textShadow="0 3px 6px #5b1c6d"
       >
         ERC-7412
       </Heading>
-      <Heading fontWeight={500} letterSpacing=".04rem">
+      <Heading
+        fontWeight={500}
+        letterSpacing=".04rem"
+        textShadow="0 3px 6px #5b1c6d"
+      >
         A{' '}
         <Link
           href="https://eips.ethereum.org/EIPS/eip-7412"

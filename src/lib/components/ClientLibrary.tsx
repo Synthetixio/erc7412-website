@@ -10,15 +10,20 @@ import {
   Image,
   Flex,
 } from '@chakra-ui/react';
+import { merge } from 'lodash';
 import { CodeBlock, atomOneDark } from 'react-code-blocks';
 import { FaGithub } from 'react-icons/fa';
 import { SiNpm } from 'react-icons/si';
+
+merge(atomOneDark, {
+  backgroundColor: 'none',
+});
 
 const example = `import { withRequiredOracleData, PythAdapter } from "erc7412";
 
 // Convert transactions into an array of transactions, prepending \`fulfillOracleQuery()\` calls.
 // This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
-const transactionsWithOracleData = withRequiredOracleData(
+const transactionsWithOracleData = await withRequiredOracleData(
   transactions,
   [new PythAdapter('https://hermes.pyth.network')]
 );
@@ -38,15 +43,15 @@ function MyCodeBlock() {
 
 const ClientLibrary = () => {
   return (
-    <Box mb={16}>
-      <Heading fontWeight={500} mb={4}>
+    <Box mb={[16, 16, 48]}>
+      <Heading fontWeight={500} mb={3}>
         Build apps with protocols that connect to oracles
       </Heading>
-      <Text mb={4}>
+      <Text mb={6}>
         The client library automatically adds oracle data to transactions when
         necessary.
       </Text>
-      <Box mb={8}>
+      <Box mb={[8, 8, 12]}>
         <Stack direction="row" spacing={4}>
           <Button
             as={Link}
@@ -56,6 +61,7 @@ const ClientLibrary = () => {
             _hover={{ textDecoration: 'none' }}
             border="1px solid"
             borderColor="whiteAlpha.300"
+            boxShadow="0 3px 10px #17071c"
           >
             View on GitHub
           </Button>
@@ -67,15 +73,24 @@ const ClientLibrary = () => {
             _hover={{ textDecoration: 'none' }}
             border="1px solid"
             borderColor="whiteAlpha.300"
+            boxShadow="0 3px 10px #17071c"
           >
             View on npm
           </Button>
         </Stack>
       </Box>
-      <Box mb={2} maxWidth="767px" style={{ fontFamily: 'monospace' }}>
+      <Box
+        mb={3}
+        maxWidth="767px"
+        style={{ fontFamily: 'monospace' }}
+        padding={2}
+        background="#ffffff0f"
+        borderRadius="md"
+        boxShadow="0 3px 10px #17071c"
+      >
         <MyCodeBlock />
       </Box>
-      <Text fontSize="sm" color="gray.300" mb={16}>
+      <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
         See the{' '}
         <Link
           href="https://github.com/synthetixio/erc7412"
@@ -96,11 +111,11 @@ const ClientLibrary = () => {
         </Link>
         .
       </Text>
-      <Heading size="md" mb={5}>
+      <Heading size="md" mb={6}>
         Compatible Account Abstraction Solutions
       </Heading>
 
-      <Stack direction={['column', 'row']} spacing={8} mb={2}>
+      <Stack direction={['column', 'row']} spacing={8} mb={3}>
         <Flex
           href="https://safe.global"
           isExternal
@@ -115,6 +130,7 @@ const ClientLibrary = () => {
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
+          boxShadow="0 3px 10px #17071c"
         >
           <Image src="/logos/safe.svg" alt="Safe" m="auto" opacity="0.8" />
         </Flex>
@@ -132,6 +148,7 @@ const ClientLibrary = () => {
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
+          boxShadow="0 3px 10px #17071c"
         >
           <Image
             src="/logos/biconomy.svg"
@@ -155,6 +172,7 @@ const ClientLibrary = () => {
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
+          boxShadow="0 3px 10px #17071c"
         >
           <Image
             src="/logos/zerodev.svg"

@@ -9,8 +9,8 @@ const Home = () => {
     <Box>
       <Hero />
       <Container maxWidth="container.lg" px={[0, 0, 20]}>
-        <ClientLibrary />
         <SmartContracts />
+        <ClientLibrary />
       </Container>
     </Box>
   );

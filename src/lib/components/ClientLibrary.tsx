@@ -48,7 +48,7 @@ const example2 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
 // TODO
 
 // Prepare Transactions for Signing/Submission
-// This returns a call to the trusted multicall forwarder
+// This returns a call to the trusted multicall forwarder.
 // TODO`;
 
 const example3 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
@@ -58,7 +58,7 @@ const example3 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
 // TODO
 
 // Prepare Transactions for Signing/Submission
-// This returns a call to the trusted multicall forwarder
+// This returns a call to the trusted multicall forwarder.
 // TODO`;
 
 function MyCodeBlock({ code }: { code: string }) {
@@ -210,7 +210,7 @@ const ClientLibrary = () => {
               </Link>{' '}
               using{' '}
               <Link
-                href="https://docs.pimlico.io/permissionless"
+                href="https://viem.sh/"
                 isExternal
                 borderBottom="1px solid"
                 _hover={{ textDecoration: 'none' }}
@@ -245,7 +245,7 @@ const ClientLibrary = () => {
               </Link>{' '}
               using{' '}
               <Link
-                href="https://docs.pimlico.io/permissionless"
+                href="https://docs.ethers.org/v6/"
                 isExternal
                 borderBottom="1px solid"
                 _hover={{ textDecoration: 'none' }}

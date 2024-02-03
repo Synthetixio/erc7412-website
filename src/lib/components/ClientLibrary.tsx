@@ -27,7 +27,7 @@ merge(atomOneDark, {
   metaColor: 'red',
 });
 
-const example = `import { withRequiredOracleData, PythAdapter } from "erc7412";
+const example1 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
 
 // Call View Functions
 // This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
@@ -41,10 +41,30 @@ const transactionsWithOracleData = await withRequiredOracleData(
 );
 return await client.sendTransactions({ transactions: transactionsWithOracleData });`;
 
-function MyCodeBlock() {
+const example2 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
+
+// Call View Functions
+// This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
+// TODO
+
+// Prepare Transactions for Signing/Submission
+// This returns a call to the trusted multicall forwarder
+// TODO`;
+
+const example3 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
+
+// Call View Functions
+// This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
+// TODO
+
+// Prepare Transactions for Signing/Submission
+// This returns a call to the trusted multicall forwarder
+// TODO`;
+
+function MyCodeBlock({ code }: { code: string }) {
   return (
     <CodeBlock
-      text={example}
+      text={code}
       language="javascript"
       showLineNumbers={false}
       theme={atomOneDark}
@@ -141,7 +161,7 @@ const ClientLibrary = () => {
               borderRadius="md"
               boxShadow="0 3px 10px #17071c"
             >
-              <MyCodeBlock />
+              <MyCodeBlock code={example1} />
             </Box>
             <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
               See the{' '}
@@ -175,7 +195,7 @@ const ClientLibrary = () => {
               borderRadius="md"
               boxShadow="0 3px 10px #17071c"
             >
-              <MyCodeBlock />
+              <MyCodeBlock code={example2} />
             </Box>
 
             <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
@@ -210,7 +230,7 @@ const ClientLibrary = () => {
               borderRadius="md"
               boxShadow="0 3px 10px #17071c"
             >
-              <MyCodeBlock />
+              <MyCodeBlock code={example3} />
             </Box>
 
             <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>

@@ -92,6 +92,7 @@ const CustomTab: React.FC<CustomTabProps> = ({
       size="sm"
       variant="outline"
       mr={5}
+      _hover={{ color: 'white' }}
       _selected={{ color: 'white', outline: '1px solid #c678dd' }}
       {...rest}
     >

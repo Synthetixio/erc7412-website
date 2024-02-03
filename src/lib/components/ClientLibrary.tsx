@@ -1,5 +1,6 @@
 'use client';
 
+import type { TabProps } from '@chakra-ui/react';
 import {
   Box,
   Heading,
@@ -9,6 +10,12 @@ import {
   Link,
   Image,
   Flex,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Tag,
 } from '@chakra-ui/react';
 import { merge } from 'lodash';
 import { CodeBlock, atomOneDark } from 'react-code-blocks';
@@ -17,17 +24,21 @@ import { SiNpm } from 'react-icons/si';
 
 merge(atomOneDark, {
   backgroundColor: 'none',
+  metaColor: 'red',
 });
 
 const example = `import { withRequiredOracleData, PythAdapter } from "erc7412";
 
-// Convert transactions into an array of transactions, prepending \`fulfillOracleQuery()\` calls.
+// Call View Functions
 // This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
+// TODO
+
+// Prepare Transactions for Signing/Submission
+// This returns an array that includes \`fulfillOracleQuery()\` calls when necessary.
 const transactionsWithOracleData = await withRequiredOracleData(
   transactions,
   [new PythAdapter('https://hermes.pyth.network')]
 );
-
 return await client.sendTransactions({ transactions: transactionsWithOracleData });`;
 
 function MyCodeBlock() {
@@ -41,6 +52,39 @@ function MyCodeBlock() {
   );
 }
 
+interface CustomTabProps extends TabProps {
+  children: React.ReactNode;
+  tagText: string;
+}
+
+// CustomTab component definition with TypeScript
+const CustomTab: React.FC<CustomTabProps> = ({
+  // eslint-disable-next-line react/prop-types
+  children,
+  // eslint-disable-next-line react/prop-types
+  tagText,
+  ...rest
+}) => {
+  return (
+    <Tag
+      as={Tab}
+      height="2em"
+      size="sm"
+      variant="outline"
+      mr={5}
+      _selected={{ color: 'white', outline: '1px solid #c678dd' }}
+      {...rest}
+    >
+      <Flex align="baseline">
+        {children}&nbsp;
+        <Text fontWeight="300" fontSize="2xs">
+          {tagText}
+        </Text>
+      </Flex>
+    </Tag>
+  );
+};
+
 const ClientLibrary = () => {
   return (
     <Box mb={[16, 16, 48]}>
@@ -51,7 +95,7 @@ const ClientLibrary = () => {
         The client library automatically adds oracle data to transactions when
         necessary.
       </Text>
-      <Box mb={[8, 8, 12]}>
+      <Box mb={[8, 8, 16]}>
         <Stack direction="row" spacing={4}>
           <Button
             as={Link}
@@ -79,38 +123,121 @@ const ClientLibrary = () => {
           </Button>
         </Stack>
       </Box>
-      <Box
-        mb={3}
-        maxWidth="767px"
-        style={{ fontFamily: 'monospace' }}
-        padding={2}
-        background="#ffffff0f"
-        borderRadius="md"
-        boxShadow="0 3px 10px #17071c"
-      >
-        <MyCodeBlock />
-      </Box>
-      <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
-        See the{' '}
-        <Link
-          href="https://github.com/synthetixio/erc7412"
-          isExternal
-          borderBottom="1px solid"
-          _hover={{ textDecoration: 'none' }}
-        >
-          full example
-        </Link>{' '}
-        using{' '}
-        <Link
-          href="https://docs.pimlico.io/permissionless"
-          isExternal
-          borderBottom="1px solid"
-          _hover={{ textDecoration: 'none' }}
-        >
-          permissionless.js
-        </Link>
-        .
-      </Text>
+
+      <Tabs variant="unstyled">
+        <TabList mb={6}>
+          <CustomTab tagText="permissionless.js">Account Abstraction</CustomTab>
+          <CustomTab tagText="v2">viem</CustomTab>
+          <CustomTab tagText="v6">ethers.js</CustomTab>
+        </TabList>
+        <TabPanels>
+          <TabPanel p={0}>
+            <Box
+              mb={3}
+              maxWidth="767px"
+              style={{ fontFamily: 'monospace' }}
+              padding={2}
+              background="#ffffff0f"
+              borderRadius="md"
+              boxShadow="0 3px 10px #17071c"
+            >
+              <MyCodeBlock />
+            </Box>
+            <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
+              See the{' '}
+              <Link
+                href="https://github.com/synthetixio/erc7412"
+                isExternal
+                borderBottom="1px solid"
+                _hover={{ textDecoration: 'none' }}
+              >
+                full example
+              </Link>{' '}
+              using{' '}
+              <Link
+                href="https://docs.pimlico.io/permissionless"
+                isExternal
+                borderBottom="1px solid"
+                _hover={{ textDecoration: 'none' }}
+              >
+                permissionless.js
+              </Link>
+              .
+            </Text>
+          </TabPanel>
+          <TabPanel p={0}>
+            <Box
+              mb={3}
+              maxWidth="767px"
+              style={{ fontFamily: 'monospace' }}
+              padding={2}
+              background="#ffffff0f"
+              borderRadius="md"
+              boxShadow="0 3px 10px #17071c"
+            >
+              <MyCodeBlock />
+            </Box>
+
+            <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
+              See the{' '}
+              <Link
+                href="https://github.com/synthetixio/erc7412"
+                isExternal
+                borderBottom="1px solid"
+                _hover={{ textDecoration: 'none' }}
+              >
+                full example
+              </Link>{' '}
+              using{' '}
+              <Link
+                href="https://docs.pimlico.io/permissionless"
+                isExternal
+                borderBottom="1px solid"
+                _hover={{ textDecoration: 'none' }}
+              >
+                viem v2
+              </Link>
+              .
+            </Text>
+          </TabPanel>
+          <TabPanel p={0}>
+            <Box
+              mb={3}
+              maxWidth="767px"
+              style={{ fontFamily: 'monospace' }}
+              padding={2}
+              background="#ffffff0f"
+              borderRadius="md"
+              boxShadow="0 3px 10px #17071c"
+            >
+              <MyCodeBlock />
+            </Box>
+
+            <Text fontSize="sm" color="gray.300" mb={[16, 16, 20]}>
+              See the{' '}
+              <Link
+                href="https://github.com/synthetixio/erc7412"
+                isExternal
+                borderBottom="1px solid"
+                _hover={{ textDecoration: 'none' }}
+              >
+                full example
+              </Link>{' '}
+              using{' '}
+              <Link
+                href="https://docs.pimlico.io/permissionless"
+                isExternal
+                borderBottom="1px solid"
+                _hover={{ textDecoration: 'none' }}
+              >
+                ethers.js v6
+              </Link>
+              .
+            </Text>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+
       <Heading size="md" mb={6}>
         Compatible Account Abstraction Solutions
       </Heading>

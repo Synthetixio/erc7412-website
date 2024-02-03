@@ -12,8 +12,8 @@ const Footer = () => {
         >
           ERC-7412
         </Text>
-        &nbsp;powers&nbsp;
-        <Link mx={1} isExternal href="https://v3.synthetix.io">
+        &nbsp;powers&nbsp;&nbsp;
+        <Link isExternal href="https://v3.synthetix.io">
           <Image
             display="inline"
             src="/logos/synthetix.svg"
@@ -21,8 +21,8 @@ const Footer = () => {
             height="16px"
           />
         </Link>
-        &nbsp;on
-        <Link mx={2.5} isExternal href="https://base.org">
+        &nbsp;&nbsp;on&nbsp;&nbsp;
+        <Link isExternal href="https://base.org">
           <Image
             display="inline"
             src="/logos/base.svg"

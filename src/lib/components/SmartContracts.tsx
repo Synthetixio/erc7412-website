@@ -31,8 +31,14 @@ const example1 = `function ethPrice() public view returns (uint256) {
   uint stalenessTolerance = 60; // in seconds
   return pyth.getLatestPrice(priceId, stalenessTolerance); // also see getBenchmarkPrice
 }`;
-const example2 = `// coming soon`;
-const example3 = `// coming soon`;
+const example2 = `function linkPrice() public view returns (uint256) {
+  DataStreamsERC7412Compatible chainlink = DataStreamsERC7412Compatible("");
+  return chainlink.
+}`;
+const example3 = `function btcPrice() public view returns (uint256) {
+  ERC7412RedstoneFeed redstoneBTC = ERC7412RedstoneFeed("");
+  return redstoneBTC.getLatestValue();
+}`;
 
 function MyCodeBlock({ code }: { code: string }) {
   return (

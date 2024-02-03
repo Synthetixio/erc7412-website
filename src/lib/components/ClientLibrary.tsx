@@ -279,6 +279,8 @@ const ClientLibrary = () => {
           fontWeight={600}
           fontSize="xl"
           boxShadow="0 3px 10px #17071c"
+          // eslint-disable-next-line sonarjs/no-duplicate-string
+          _hover={{ background: 'whiteAlpha.200' }}
         >
           <Image src="/logos/safe.svg" alt="Safe" m="auto" opacity="0.8" />
         </Flex>
@@ -297,6 +299,7 @@ const ClientLibrary = () => {
           fontWeight={600}
           fontSize="xl"
           boxShadow="0 3px 10px #17071c"
+          _hover={{ background: 'whiteAlpha.200' }}
         >
           <Image
             src="/logos/biconomy.svg"
@@ -321,6 +324,7 @@ const ClientLibrary = () => {
           fontWeight={600}
           fontSize="xl"
           boxShadow="0 3px 10px #17071c"
+          _hover={{ background: 'whiteAlpha.200' }}
         >
           <Image
             src="/logos/zerodev.svg"

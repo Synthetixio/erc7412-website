@@ -126,8 +126,11 @@ const SmartContracts = () => {
         </TabList>
         <TabPanels>
           <TabPanel p={0}>
+            <Text fontSize="sm" color="gray.300" mb={1}>
+              Example Code
+            </Text>
             <Box
-              mb={3}
+              mb={6}
               maxWidth="767px"
               style={{ fontFamily: 'monospace' }}
               padding={2}
@@ -187,8 +190,11 @@ const SmartContracts = () => {
             </Stack>
           </TabPanel>
           <TabPanel p={0}>
+            <Text fontSize="sm" color="gray.300" mb={1}>
+              Example Code
+            </Text>
             <Box
-              mb={3}
+              mb={6}
               maxWidth="767px"
               style={{ fontFamily: 'monospace' }}
               padding={2}
@@ -229,8 +235,11 @@ const SmartContracts = () => {
             </Stack>
           </TabPanel>
           <TabPanel p={0}>
+            <Text fontSize="sm" color="gray.300" mb={1}>
+              Example Code
+            </Text>
             <Box
-              mb={3}
+              mb={6}
               maxWidth="767px"
               style={{ fontFamily: 'monospace' }}
               padding={2}

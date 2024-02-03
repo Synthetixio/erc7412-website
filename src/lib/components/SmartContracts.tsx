@@ -38,7 +38,7 @@ function MyCodeBlock({ code }: { code: string }) {
   return (
     <CodeBlock
       text={code}
-      language="javascript"
+      language="solidity"
       showLineNumbers={false}
       theme={atomOneDark}
     />

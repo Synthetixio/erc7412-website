@@ -122,7 +122,7 @@ const ClientLibrary = () => {
             href="https://github.com/synthetixio/erc7412"
             leftIcon={<FaGithub />}
             size="sm"
-            _hover={{ textDecoration: 'none' }}
+            _hover={{ textDecoration: 'none', background: 'gray.800' }}
             border="1px solid"
             borderColor="whiteAlpha.300"
             boxShadow="0 3px 10px #17071c"
@@ -134,7 +134,7 @@ const ClientLibrary = () => {
             href="https://www.npmjs.com/package/erc7412"
             leftIcon={<SiNpm />}
             size="sm"
-            _hover={{ textDecoration: 'none' }}
+            _hover={{ textDecoration: 'none', background: 'gray.800' }}
             border="1px solid"
             borderColor="whiteAlpha.300"
             boxShadow="0 3px 10px #17071c"

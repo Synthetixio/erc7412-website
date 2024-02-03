@@ -70,7 +70,9 @@ const CustomTab: React.FC<CustomTabProps> = ({
       p={2}
       minWidth="96px"
       minHeight="0px"
-      _selected={{ color: 'white', outline: '1px solid #c678dd' }}
+      opacity={0.8}
+      _hover={{ opacity: 1 }}
+      _selected={{ color: 'white', outline: '1px solid #c678dd', opacity: 1 }}
       {...rest}
     >
       {children}
@@ -142,7 +144,7 @@ const SmartContracts = () => {
                 href="https://pyth.network"
                 leftIcon={<FaLink />}
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"
@@ -155,7 +157,7 @@ const SmartContracts = () => {
                 href="https://github.com/Synthetixio/synthetix-v3/tree/main/auxiliary/PythERC7412Wrapper"
                 leftIcon={<FaGithub />}
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"
@@ -174,7 +176,7 @@ const SmartContracts = () => {
                   />
                 }
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"
@@ -203,7 +205,7 @@ const SmartContracts = () => {
                 href="https://docs.chain.link/data-streams"
                 leftIcon={<FaLink />}
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"
@@ -216,7 +218,7 @@ const SmartContracts = () => {
                 href="https://github.com/smartcontractkit/datastreams-erc7412"
                 leftIcon={<FaGithub />}
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"
@@ -245,7 +247,7 @@ const SmartContracts = () => {
                 href="https://redstone.finance/"
                 leftIcon={<FaLink />}
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"
@@ -258,7 +260,7 @@ const SmartContracts = () => {
                 href="https://github.com/redstone-finance/erc7412"
                 leftIcon={<FaGithub />}
                 size="sm"
-                _hover={{ textDecoration: 'none' }}
+                _hover={{ textDecoration: 'none', background: 'gray.800' }}
                 border="1px solid"
                 borderColor="whiteAlpha.300"
                 boxShadow="0 3px 10px #17071c"

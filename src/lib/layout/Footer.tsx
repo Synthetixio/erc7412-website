@@ -2,8 +2,8 @@ import { Box, Link, Text, Image, Container } from '@chakra-ui/react';
 
 const Footer = () => {
   return (
-    <Container maxWidth="container.lg" px={[0, 0, 20]}>
-      <Box mb={48} fontSize="2xl">
+    <Container my={48} maxWidth="container.lg" px={[0, 0, 20]}>
+      <Box fontSize="2xl" mb={2.5}>
         <Text
           display="inline"
           fontWeight={900}
@@ -32,6 +32,17 @@ const Footer = () => {
           />
         </Link>
       </Box>
+      <Text fontSize="sm" color="gray.300">
+        Build something awesome that integrates with{' '}
+        <Link
+          borderBottom="1px solid"
+          _hover={{ textDecoration: 'none' }}
+          isExternal
+          href="https://docs.synthetix.io/v/v3/for-perp-integrators/base-andromeda"
+        >
+          Synthetix Perps V3
+        </Link>
+      </Text>
     </Container>
   );
 };

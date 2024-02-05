@@ -90,9 +90,8 @@ const SmartContracts = () => {
         Write and deploy smart contracts that call oracle contracts to reference
         off-chain data.
       </Text>
-
       <Tabs variant="unstyled">
-        <TabList mb={8}>
+        <TabList width="auto" mb={8}>
           <CustomTab>
             <Image
               src="/logos/pyth.svg"

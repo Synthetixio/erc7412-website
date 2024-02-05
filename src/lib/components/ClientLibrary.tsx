@@ -117,7 +117,7 @@ const ClientLibrary = () => {
         necessary.
       </Text>
       <Box mb={[8, 8, 16]}>
-        <Stack direction="row" spacing={4}>
+        <Stack direction="row" spacing={3}>
           <Button
             as={Link}
             href="https://github.com/synthetixio/erc7412"
@@ -147,9 +147,13 @@ const ClientLibrary = () => {
 
       <Tabs variant="unstyled">
         <TabList mb={6}>
-          <CustomTab tagText="permissionless.js">Account Abstraction</CustomTab>
-          <CustomTab tagText="v2">viem</CustomTab>
-          <CustomTab tagText="v6">ethers.js</CustomTab>
+          <Flex direction={{ base: 'column', md: 'row' }} gap="2">
+            <CustomTab tagText="permissionless.js">
+              Account Abstraction
+            </CustomTab>
+            <CustomTab tagText="v2">viem</CustomTab>
+            <CustomTab tagText="v6">ethers.js</CustomTab>
+          </Flex>
         </TabList>
         <TabPanels>
           <TabPanel p={0}>
@@ -263,18 +267,18 @@ const ClientLibrary = () => {
         Compatible Account Abstraction Solutions
       </Heading>
 
-      <Stack direction={['column', 'row']} spacing={8} mb={3}>
+      <Stack direction={['column', 'row']} spacing={6} mb={3}>
         <Flex
           href="https://safe.global"
           isExternal
           as={Link}
-          p={4}
           bg="whiteAlpha.100"
           borderRadius="md"
           border="1px solid"
           borderColor="whiteAlpha.300"
-          minWidth="200px"
-          minHeight="82px"
+          p={2}
+          minWidth="96px"
+          minHeight="64px"
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
@@ -282,19 +286,27 @@ const ClientLibrary = () => {
           // eslint-disable-next-line sonarjs/no-duplicate-string
           _hover={{ background: 'whiteAlpha.200' }}
         >
-          <Image src="/logos/safe.svg" alt="Safe" m="auto" opacity="0.8" />
+          <Image
+            src="/logos/safe.svg"
+            alt="Safe"
+            m="auto"
+            px={2}
+            height="100%"
+            opacity="0.8"
+            maxHeight="48px"
+          />
         </Flex>
         <Flex
           href="https://biconomy.io/"
           isExternal
           as={Link}
-          p={4}
           bg="whiteAlpha.100"
           borderRadius="md"
           border="1px solid"
           borderColor="whiteAlpha.300"
-          minWidth="200px"
-          minHeight="82px"
+          p={2}
+          minWidth="96px"
+          minHeight="64px"
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
@@ -305,6 +317,8 @@ const ClientLibrary = () => {
             src="/logos/biconomy.svg"
             alt="Biconomy"
             m="auto"
+            maxHeight="32px"
+            px={6}
             opacity="0.8"
             transform="scale(1.25) translate(0, 2px)"
           />
@@ -313,13 +327,13 @@ const ClientLibrary = () => {
           href="https://zerodev.app/"
           isExternal
           as={Link}
-          p={4}
           bg="whiteAlpha.100"
           borderRadius="md"
           border="1px solid"
           borderColor="whiteAlpha.300"
-          minWidth="200px"
-          minHeight="82px"
+          p={2}
+          minWidth="96px"
+          minHeight="64px"
           textAlign="center"
           fontWeight={600}
           fontSize="xl"
@@ -330,6 +344,8 @@ const ClientLibrary = () => {
             src="/logos/zerodev.svg"
             alt="ZeroDev"
             m="auto"
+            px={2}
+            maxHeight="38px"
             opacity="0.8"
           />
         </Flex>

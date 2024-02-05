@@ -42,6 +42,7 @@ const Footer = () => {
         >
           Synthetix Perps V3
         </Link>
+        .
       </Text>
     </Container>
   );

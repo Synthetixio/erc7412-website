@@ -91,7 +91,6 @@ const CustomTab: React.FC<CustomTabProps> = ({
       height="2em"
       size="sm"
       variant="outline"
-      mr={5}
       _hover={{ color: 'white' }}
       _selected={{ color: 'white', outline: '1px solid #c678dd' }}
       {...rest}
@@ -147,7 +146,7 @@ const ClientLibrary = () => {
 
       <Tabs variant="unstyled">
         <TabList mb={6}>
-          <Flex direction={{ base: 'column', md: 'row' }} gap="2">
+          <Flex direction={{ base: 'column', md: 'row' }} gap="4">
             <CustomTab tagText="permissionless.js">
               Account Abstraction
             </CustomTab>

@@ -27,13 +27,15 @@ merge(atomOneDark, {
   metaColor: 'red',
 });
 
-const example1 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
+const example1 = `// Under Development
+
+import { withRequiredOracleData, PythAdapter } from "erc7412";
 
 // Call View Functions
 // This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
 // TODO
 
-// Prepare Transactions for Signing/Submission
+// Prepare Transactions for Signing
 // This returns an array that includes \`fulfillOracleQuery()\` calls when necessary.
 const transactionsWithOracleData = await withRequiredOracleData(
   transactions,
@@ -41,23 +43,27 @@ const transactionsWithOracleData = await withRequiredOracleData(
 );
 return await client.sendTransactions({ transactions: transactionsWithOracleData });`;
 
-const example2 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
+const example2 = `// Under Development
+
+import { withRequiredOracleData, PythAdapter } from "erc7412";
 
 // Call View Functions
 // This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
 // TODO
 
-// Prepare Transactions for Signing/Submission
+// Prepare Transactions for Signing
 // This returns a call to the trusted multicall forwarder.
 // TODO`;
 
-const example3 = `import { withRequiredOracleData, PythAdapter } from "erc7412";
+const example3 = `// Under Development
+
+import { withRequiredOracleData, PythAdapter } from "erc7412";
 
 // Call View Functions
 // This automatically resolves \`OracleDataRequired\` and \`FeeRequired\` errors.
 // TODO
 
-// Prepare Transactions for Signing/Submission
+// Prepare Transactions for Signing
 // This returns a call to the trusted multicall forwarder.
 // TODO`;
 

@@ -29,14 +29,15 @@ const example1 = `function ethPrice() public view returns (uint256) {
   IPythERC7412Wrapper pyth = IPythERC7412Wrapper("0xEb38e347F24ea04ffA945a475BdD949E0c383A0F");
   bytes32 priceId = "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace";
   uint stalenessTolerance = 60; // in seconds
-  return pyth.getLatestPrice(priceId, stalenessTolerance); // also see getBenchmarkPrice
+  return pyth.getLatestPrice(priceId, stalenessTolerance); // also see getBenchmarkPrice()
 }`;
 const example2 = `function linkPrice() public view returns (uint256) {
-  DataStreamsERC7412Compatible chainlink = DataStreamsERC7412Compatible("");
-  return chainlink.
+  // Under Development
+  DataStreamsERC7412Compatible chainlink = DataStreamsERC7412Compatible();
 }`;
 const example3 = `function btcPrice() public view returns (uint256) {
-  ERC7412RedstoneFeed redstoneBTC = ERC7412RedstoneFeed("");
+  // Under Development
+  ERC7412RedstoneFeed redstoneBTC = ERC7412RedstoneFeed();
   return redstoneBTC.getLatestValue();
 }`;
 
